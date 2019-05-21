@@ -23,7 +23,7 @@
               <tr *ngFor="let ex of lstExpenses  let i = index">
                 <td>{{i+1}}</td>
                 <td>{{ex.date}}</td>
-                <td>{{ex.userId[0].name}}</td>
+                <td>{{ex.userId.name}}</td>
                 <td>{{ex.description}}</td>
                 <td>{{ex.amount}}</td>
                 <td><button class="btn btn-danger" (click)="deleteExpense(i)">Delete</button></td>

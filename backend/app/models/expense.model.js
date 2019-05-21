@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 
 const ExpenseSchema = mongoose.Schema({
-    userId: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+    userId: { type: Schema.Types.ObjectId, ref: 'User' },
     amount: Number,
     description: String,
     date: String
