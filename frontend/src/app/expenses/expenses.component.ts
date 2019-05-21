@@ -20,6 +20,7 @@ export class ExpensesComponent implements OnInit {
     this.loadExpenses();
   }
 
+  /// get Users 
   loadUsers() {
     this.userService.getUsers()
       .subscribe(
@@ -27,7 +28,7 @@ export class ExpensesComponent implements OnInit {
         err => console.log(err)
       );
   }
-
+/// get expenses summary
   loadExpenses() {
     this.expenseService.getExpenses()
       .subscribe(
@@ -35,7 +36,7 @@ export class ExpensesComponent implements OnInit {
         err => console.log(err)
       );
   }
-
+/// buiding the form
   buidForm() {
     this.expenseFrom = new FormGroup({
       userId: new FormControl(null, Validators.required),
@@ -44,7 +45,7 @@ export class ExpensesComponent implements OnInit {
       amount: new FormControl('', Validators.required),
     });
   }
-
+/// saving expense
   saveExpense() {
     if (this.expenseFrom.valid) {
       this.expenseService.saveExpense(this.expenseFrom.value)
@@ -56,6 +57,7 @@ export class ExpensesComponent implements OnInit {
     }
     this.closeBtn.nativeElement.click();
   }
+  /// deleting the expense
   deleteExpense(expenseId: string) {
     if (confirm('Are you sure want to delete?')) {
       this.expenseService.deleteExpense(expenseId)

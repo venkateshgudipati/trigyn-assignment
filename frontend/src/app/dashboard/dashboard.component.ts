@@ -23,6 +23,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.loadReport();
   }
+  /// get summery of total expenses and user count
   loadReport() {
     this.dashService.getReport()
       .subscribe(
@@ -30,6 +31,8 @@ export class DashboardComponent implements OnInit {
         err => console.log(err)
       );
   }
+
+  /// get avaiable users in the system
   loadUsers() {
     this.userService.getUsers()
       .subscribe(
@@ -37,6 +40,8 @@ export class DashboardComponent implements OnInit {
         err => console.log(err)
       );
   }
+
+  /// get summary of expenses amount group by user
   loadSummary() {
     this.dashService.getsummaryExpenses()
       .subscribe(
@@ -44,6 +49,7 @@ export class DashboardComponent implements OnInit {
         err => console.log(err)
       );
   }
+  /// calculating  avg values per person
   calculateAvg() {
     if (this.report.userCount > 0) {
       this.avgPerUser = this.report.totalExpenses / this.report.userCount;
@@ -53,25 +59,7 @@ export class DashboardComponent implements OnInit {
     this.splitPayments();
   }
 
-  // render(user: any) {
-  //   let expense = this.expenseSummary.filter(c => c._id == user._id);
-  //   if (expense) {
-  //     let remaining = 0;
-  //     let spendamount = expense[0].total;
-  //     if (this.avgPerUser > spendamount) {
-  //       remaining = this.avgPerUser - spendamount;
-  //       return `${user.name} owes amount ${remaining} to others`
-  //     } else if (this.avgPerUser < spendamount) {
-  //       remaining = spendamount - this.avgPerUser;
-  //       return `${user.name} gets amount ${remaining} from others`
-  //     } else {
-  //       return `${user.name} no need to settle with others`
-  //     }
-  //   }
-  //   return user.name;
-  // }
-
-
+/// split payments and generate owes summary
   splitPayments() {
     let allUsers = [];
 

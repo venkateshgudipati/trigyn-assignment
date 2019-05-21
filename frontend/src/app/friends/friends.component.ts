@@ -20,21 +20,21 @@ export class FriendsComponent implements OnInit {
     this.loadUsers();
     this.buildForm();
   }
-
+/// get Users
   loadUsers() {
     this.userService.getUsers().subscribe(
       res => this.lstUsers = res,
       err => console.log(err)
     )
   }
-
+/// building the form for creating user
   buildForm() {
     this.userForm = new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
     });
   }
-
+/// saving the user
   saveUser() {
     if (this.userForm.valid) {
       this.userService.saveUser(this.userForm.value)
@@ -46,7 +46,7 @@ export class FriendsComponent implements OnInit {
     }
     this.closeBtn.nativeElement.click();
   }
-
+/// deleting the user
   deleteUser(userId: string) {
     if (confirm('Are you sure want to delete?')) {
       this.userService.deleteUser(userId)
