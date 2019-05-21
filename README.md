@@ -9,6 +9,7 @@ to run above application we need  to install following items on your macine
 2. MongoDB
 3. Angular CLI
 ----------------------------- BACK END ----------------------------------------------------------
+
 open command prompt 
 cd backend
 npm install
@@ -17,6 +18,7 @@ node index.js
 ----------------------------- BACK END ----------------------------------------------------------
 
 ----------------------------- Front END ----------------------------------------------------------
+
 open command prompt
 cd frontend
 npm install
@@ -25,3 +27,5 @@ open browser http://locahost:4300
 
 
 ----------------------------- Front END ----------------------------------------------------------
+Screen Shots
+<img src="screenshot/reportsummary.png"/>
