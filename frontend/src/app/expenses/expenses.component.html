@@ -1,0 +1,77 @@
+<div class="content-wrapper">
+  <div class="container-fluid">
+    <div class=" card mb-3">
+      <div class="card-header">
+        <i class="fas fa-table"></i>
+        Manage Expenses
+        <button class="float-right" data-toggle="modal" data-target="#exampleModal">Add New Expense</button>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>S.No</th>
+                <th>Date</th>
+                <th>Who Paid?</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let ex of lstExpenses  let i = index">
+                <td>{{i+1}}</td>
+                <td>{{ex.date}}</td>
+                <td>{{ex.userId[0].name}}</td>
+                <td>{{ex.description}}</td>
+                <td>{{ex.amount}}</td>
+                <td><button class="btn btn-danger" (click)="deleteExpense(i)">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add New Expense</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closeBtn>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="expenseFrom">
+          <div class="form-group">
+            <label for="name">Date</label>
+            <input type="date" class="form-control" id="date" placeholder="Enter Date" formControlName="date">
+          </div>
+          <div class="form-group">
+            <label for="name">Who Paid?</label>
+            <select formControlName="userId" class="form-control">
+                <option value="null">Select User</option>
+                <option *ngFor="let u of lstUsers" value="{{u._id}}">{{u.name}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="Description">Description</label>
+            <input type="text" class="form-control" id="description" placeholder="Enter Description" formControlName="description">
+          </div>
+          <div class="form-group">
+              <label for="amount">Amout</label>
+              <input type="number" class="form-control" id="amount" placeholder="Enter Amount" formControlName="amount">
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="saveExpense()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

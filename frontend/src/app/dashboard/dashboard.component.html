@@ -1,0 +1,60 @@
+<div id="content-wrapper">
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-xl-3 col-sm-6 mb-3">
+        <div class="card text-white bg-primary o-hidden h-100">
+          <div class="card-body">
+            <div class="card-body-icon">
+              <i class="fas fa-fw fa-comments"></i>
+            </div>
+            <div class="mr-5">{{report.userCount}} Users!</div>
+          </div>
+          <a class="card-footer text-white clearfix small z-1" routerLink='/friends'>
+            <span class="float-left">View Details</span>
+            <span class="float-right">
+              <i class="fas fa-angle-right"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="col-xl-3 col-sm-6 mb-3">
+        <div class="card text-white bg-warning o-hidden h-100">
+          <div class="card-body">
+            <div class="card-body-icon">
+              <i class="fas fa-fw fa-list"></i>
+            </div>
+            <div class="mr-5">{{report.totalExpenses}} Total Expenses</div>
+          </div>
+          <a class="card-footer text-white clearfix small z-1" routerLink='/expenses'>
+            <span class="float-left">View Details</span>
+            <span class="float-right">
+              <i class="fas fa-angle-right"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class=" card mb-3">
+        <div class="card-body">
+          <div class="row">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>User</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let u of lstUsers">
+                  <td>{{render(u)}}</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
