@@ -8,12 +8,13 @@ to run above application we need  to install following items on your macine
 1. Node Js
 2. MongoDB
 3. Angular CLI
+
 ----------------------------- BACK END ----------------------------------------------------------
 
-open command prompt 
-cd backend
-npm install
-node index.js
+1. open command prompt 
+2. cd backend
+3. npm install
+4. node index.js
 
 ----------------------------- BACK END ----------------------------------------------------------
 
