@@ -28,5 +28,11 @@ to run above application we need  to install following items on your macine
 
 
 ----------------------------- Front END ----------------------------------------------------------
+
+
 Screen Shots
 <img src="https://github.com/venkateshgudipati/trigyn-assignment/blob/master/screenshot/createexpense.PNG"/>
+<img src="https://github.com/venkateshgudipati/trigyn-assignment/blob/master/screenshot/createuser.PNG"/>
+<img src="https://github.com/venkateshgudipati/trigyn-assignment/blob/master/screenshot/manageexpense.PNG"/>
+<img src="httpshttps://github.com/venkateshgudipati/trigyn-assignment/blob/master/screenshot/manageuser.PNG"/>
+<img src="https://github.com/venkateshgudipati/trigyn-assignment/blob/master/screenshot/reportsummary.PNG"/>
