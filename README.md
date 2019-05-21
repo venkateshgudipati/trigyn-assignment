@@ -8,24 +8,31 @@ to run above application we need  to install following items on your macine
 1. Node Js
 2. MongoDB
 3. Angular CLI
+
 ----------------------------- BACK END ----------------------------------------------------------
 
-open command prompt 
-cd backend
-npm install
-node index.js
+1. open command prompt 
+2. cd backend
+3. npm install
+4. node index.js
 
 ----------------------------- BACK END ----------------------------------------------------------
 
 ----------------------------- Front END ----------------------------------------------------------
 
-open command prompt
-cd frontend
-npm install
-ng serve --port 4300
-open browser http://locahost:4300
+1. open command prompt
+2. cd frontend
+3. npm install
+4. ng serve --port 4300
+5. open browser http://locahost:4300
 
 
 ----------------------------- Front END ----------------------------------------------------------
+
+
 Screen Shots
-<img src="screenshot/reportsummary.png"/>
+<img src="https://github.com/venkateshgudipati/trigyn-assignment/blob/master/screenshot/createexpense.PNG"/>
+<img src="https://github.com/venkateshgudipati/trigyn-assignment/blob/master/screenshot/createuser.PNG"/>
+<img src="https://github.com/venkateshgudipati/trigyn-assignment/blob/master/screenshot/manageexpense.PNG"/>
+<img src="httpshttps://github.com/venkateshgudipati/trigyn-assignment/blob/master/screenshot/manageuser.PNG"/>
+<img src="https://github.com/venkateshgudipati/trigyn-assignment/blob/master/screenshot/reportsummary.PNG"/>
